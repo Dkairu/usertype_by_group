@@ -18,7 +18,7 @@ To be able to change user types in New Relic you can utilize our NerdGraph API t
 7. Create a Scripted API synthetic monitor with your preferences for name, frequency, and location.
 
 > **Note**
-> P.S This script looks at the group name to see if the user type is contained in the group name. You can update this in the script to reflect what it should look for in the group name before it changes the user to a Full, Core or Basic user type. 
+> This script looks at the group name to see if the user type is contained in the group name. You can update this in the script to reflect what it should look for in the group name before it changes the user to a Full, Core or Basic user type. 
 
 > For example if my group names are named as GROUP-1-FULL-USER then the script will look for this using something like 
 `if (substrings.includes("FULL"))`
