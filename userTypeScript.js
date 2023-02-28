@@ -5,10 +5,9 @@ var API_KEY = $secure.QUERY_USER_KEY; //API key to query GRAPHQL
 var INGEST_KEY = $secure.AUDITEVENT_INGEST_KEY; // add as a secure cred - Used to insert data into NRDB as a custom event.
 var GRAPH_API = 'https://api.newrelic.com/graphql';
 var HEADERS = { 'Content-Type': 'application/json', 'Api-Key': API_KEY };
-var AccountID = 1969751
+var AccountID = <ACCOUNT ID TO SEND AUDIT EVENTS>;
 var EVENTS_API = `https://insights-collector.newrelic.com/v1/accounts/${AccountID}/events`;
-var AuthenticationDomainID = '11752ae3-e1d0-41ca-9abc-1e7fe1eefa6d'
-
+var AuthenticationDomainID = '<Authentication Domain ID to check users and groups>';
 
 async function sendEvents(payload) {
     payload.eventType = "userTypeAuditEvent";
